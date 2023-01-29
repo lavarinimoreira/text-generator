@@ -2,9 +2,55 @@
   text-align: center;
 }
 
+.noise {
+  background: transparent url(./../public/images/overlay-noise.gif) ;
+  opacity: 0.04;
+}
+
+.txt__background {
+  background-color: black;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 50%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 6rem 0 0 0;
+  min-height: 100vh;
+}
+
+.hf{
+  background: linear-gradient(.9turn, #340D34, 50%, #101B40);
+  padding: 0px 64px 0 64px;
+  border-radius: 8px;
+  margin: 16px 0 24px 0;
+  box-shadow:  0 0 3px black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(180, 185, 188, 0);
+  border: 1px solid rgba(131, 134, 135, 0);
+  transition: background 200ms, border 200ms;
+  color: white;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(180, 185, 188, 0.1);
+    border: 1px solid rgba(131, 134, 135, 0.15);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +82,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .txt__background {
+    background-color: black;
+    border-radius: 8px;
+    max-width: 92%;
+  }
+  .card {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 372px) {
+  .hf h1{
+    font-size: 26px;
+  }
+}
+
+/* .noise {
+  content: "";
+  opacity: .012;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(./../public/images/overlay-noise.gif);
+} */
+
